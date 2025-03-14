@@ -1,0 +1,14 @@
+name: lint test build
+on: push
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+          - name: lint
+            run: npm run lint
+          - name: test
+            run: npm test
+          - name: build
+            run: npm run build
+          - name: finish
+            run: echo "SUCCESS WORKFLOW"
